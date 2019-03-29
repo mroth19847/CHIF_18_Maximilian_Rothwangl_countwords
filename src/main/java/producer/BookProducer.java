@@ -48,7 +48,8 @@ public class BookProducer implements Runnable {
 
             synchronized (bookQueue) {
                 try {
-                    bookQueue.put(new Book(filename, ""));
+                    bookQueue.put(new Book(filename, text));
+                    System.out.println("Book added to queue: "+filename);
                     bookQueue.notifyAll();
                 } catch (FullException ex) {
                     try {
