@@ -11,10 +11,10 @@ public class Main {
         
         Queue<Book> queue = new Queue<>(3);
         
-        BookProducer prod1 = new BookProducer(queue);
+        BookProducer prod1 = new BookProducer(queue, "Producer 1");
         new Thread(prod1, "Producer 1").start();
         
-        BookConsumer con1 = new BookConsumer(queue);
+        BookConsumer con1 = new BookConsumer(queue, "Consumer 1");
         new Thread(con1, "Consumer 1").start();
     }
 
