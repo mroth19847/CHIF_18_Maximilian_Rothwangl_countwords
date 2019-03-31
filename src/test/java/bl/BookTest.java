@@ -16,7 +16,7 @@ public class BookTest {
     
     @Test
     public void testCountWords() {
-        System.out.println("countWords");
+        System.out.println("Test of following method: countWords()");
         Book instance = new Book("", "This is a test. This is a test. #JUnitTests");
         HashMap<String, Integer> expResult = new HashMap<>();
         expResult.put("This", 2);
@@ -30,7 +30,7 @@ public class BookTest {
 
     @Test
     public void testGetWordNumber() {
-        System.out.println("getWordNumber");
+        System.out.println("Test of following method: getWordNumber()");
         String word = "test";
         String[] words = { "I", "am", "writing", "a", "unit", "test", "in", "order", "to", "test", "the", "function" };
         Book instance = new Book("", "");
@@ -41,7 +41,7 @@ public class BookTest {
 
     @Test
     public void testGetFilteredText() {
-        System.out.println("getFilteredText");
+        System.out.println("Test of following method: getFilteredText()");
         Book instance = new Book("", "This is a test. #unittests, they are sometimes useful!");
         String expResult = "This is a test unittests they are sometimes useful";
         String result = instance.getFilteredText();
