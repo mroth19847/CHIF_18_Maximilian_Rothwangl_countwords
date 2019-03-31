@@ -43,8 +43,13 @@ public class BookConsumer implements Runnable {
         System.out.println("Book: " + b.getInputfilename());
         Iterator it = map.entrySet().iterator();
         while (it.hasNext()) {
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(BookConsumer.class.getName()).log(Level.SEVERE, null, ex);
+            }
             Map.Entry pair = (Map.Entry) it.next();
-            if ((Integer) pair.getValue() >= 2) {
+            if ((Integer) pair.getValue() >= 2 && !pair.getKey().equals("")) {
                 System.out.println(pair.getKey() + " : " + pair.getValue());
             }
             it.remove();

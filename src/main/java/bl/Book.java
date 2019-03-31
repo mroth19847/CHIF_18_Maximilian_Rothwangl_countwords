@@ -29,7 +29,7 @@ public class Book {
     private int getWordNumber(String word, String[] words){
         int counter = 0;
         for (int i = 0; i < words.length; i++) {
-            if(words[i].equals(word)){
+            if(words[i].equalsIgnoreCase(word)){
                 counter ++;
             }
         }
