@@ -1,8 +1,6 @@
 package bl;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class Book {
 
@@ -26,7 +24,7 @@ public class Book {
         return wordcounter;
     }
     
-    private int getWordNumber(String word, String[] words){
+    public int getWordNumber(String word, String[] words){
         int counter = 0;
         for (int i = 0; i < words.length; i++) {
             if(words[i].equalsIgnoreCase(word)){
@@ -36,7 +34,7 @@ public class Book {
         return counter;
     }
     
-    private String getFilteredText(){
+    public String getFilteredText(){
         String filtered = text;
         for (int i = 0; i < filtered.length(); i++) {
             if(!(Character.isLetter(filtered.charAt(i))||Character.isWhitespace(filtered.charAt(i)))){
