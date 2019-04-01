@@ -80,6 +80,9 @@ public class BookProducer extends JFrame implements Runnable {
                         }
                     }
                 }
+            } else {
+                this.dispose();
+                break;
             }
 
         }
