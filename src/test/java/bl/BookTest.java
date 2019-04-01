@@ -48,4 +48,14 @@ public class BookTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testGetOutputFilename() {
+        System.out.println("Test of following method: getOutputFilename()");
+        Book instance = new Book("C:\\Documents\\text1.txt", "");
+        String expResult = "text1_output.txt";
+        String result = instance.getOutputFilename();
+        System.out.println(result);
+        assertEquals(expResult, result);
+    }
+    
 }

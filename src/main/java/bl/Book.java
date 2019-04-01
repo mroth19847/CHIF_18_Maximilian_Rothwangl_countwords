@@ -24,6 +24,12 @@ public class Book {
         return wordcounter;
     }
     
+    public String getOutputFilename(){
+        String[] hStr = inputfilename.split("\\\\");
+        String name =  hStr[hStr.length - 1].replace(".txt", "");
+        return name + "_output.txt";
+    }
+    
     public int getWordNumber(String word, String[] words){
         int counter = 0;
         for (int i = 0; i < words.length; i++) {
